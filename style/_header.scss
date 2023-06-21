@@ -1,0 +1,15 @@
+.header__image>img {
+    width: 220px;
+    height: 20px;
+    float: left;
+
+    @include laptop {
+        width: 240px;
+        height: 22px;
+        float: right;
+    }
+}
+
+.header {
+    padding-top: 20px;
+}

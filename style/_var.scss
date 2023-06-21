@@ -1,0 +1,22 @@
+$black: #000000;
+$white: #FFFFFF;
+$red: #F51B1B;
+
+
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desctop {
+    @media (min-width: 1300px) {
+        @content;
+    }
+}

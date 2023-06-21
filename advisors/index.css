@@ -1,0 +1,79 @@
+@import 'style/normalize.css';
+@font-face {
+  font-family: "TT Commons";
+  src: url("/style/fonts/TTCommonsRegular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Commons";
+  src: url("/style/fonts/TTCommonsMedium.otf") format("otf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Redcollar";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("//db.onlinewebfonts.com/t/f02cf2e6e27a17bcfe9efa18c041c208.woff2") format("woff2");
+}
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #000000;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 1024px) {
+  body {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.header__image > img {
+  width: 220px;
+  height: 20px;
+  float: left;
+}
+@media (min-width: 1024px) {
+  .header__image > img {
+    width: 240px;
+    height: 22px;
+    float: right;
+  }
+}
+
+.header {
+  padding-top: 20px;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: 48px;
+}
+.description__text {
+  background: #F51B1B;
+}
+
+#redunion {
+  position: relative;
+  width: 148px;
+  height: 65px;
+  top: -250px;
+  left: 86px;
+}
+
+#arrow {
+  position: relative;
+  width: 60px;
+  height: 19px;
+  top: -90px;
+}

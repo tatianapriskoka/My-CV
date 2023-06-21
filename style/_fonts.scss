@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'TT Commons';
+    src: url('/style/fonts/TTCommonsRegular.otf') format('otf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('/style/fonts/TTCommonsMedium.otf') format('otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Redcollar';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("//db.onlinewebfonts.com/t/f02cf2e6e27a17bcfe9efa18c041c208.woff2") format("woff2"),
+}

@@ -1,0 +1,30 @@
+.description {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 48px;
+
+    &__container {}
+
+    &__foto {}
+
+    &__text {
+        background: #F51B1B;
+    }
+}
+
+
+
+#redunion {
+    position: relative;
+    width: 148px;
+    height: 65px;
+    top: -250px;
+    left: 86px;
+}
+
+#arrow {
+    position: relative;
+    width: 60px;
+    height: 19px;
+    top: -90px;
+}
