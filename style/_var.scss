@@ -2,6 +2,12 @@ $black: #000000;
 $white: #FFFFFF;
 $red: #F51B1B;
 
+@mixin bigmobile {
+    @media (min-width: 510px) {
+        @content;
+    }
+}
+
 
 @mixin tablet {
     @media (min-width: 768px) {

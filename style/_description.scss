@@ -9,9 +9,44 @@
 
     &__text {
         background: #F51B1B;
+        position: relative;
+        top: -110px;
+        border-radius: 20px 20px 0px 0px;
+        width: 320px;
+    }
+
+    &__name {}
+
+    &__contacts {
+
+        padding-left: 16px;
+        padding-top: 32px;
+        display: grid;
+        grid-template-columns: 0.3fr 0.3fr;
+        justify-content: left;
+        align-self: center;
+        padding-bottom: 40px;
+
+
+        &_list {
+            display: grid;
+            padding-top: 15px;
+            gap: 10px;
+
+        }
+
+        &_text {
+            display: grid;
+            font-size: 16px;
+            font-family: 'TT Commons';
+            letter-spacing: -0.32px;
+            color: $white;
+
+        }
     }
 }
 
+.container {}
 
 
 #redunion {
@@ -20,11 +55,33 @@
     height: 65px;
     top: -250px;
     left: 86px;
+
+    @include bigmobile {
+        left: -46%;
+        top: -180px;
+        //top: 20px;
+
+    }
 }
+
+
 
 #arrow {
     position: relative;
     width: 60px;
     height: 19px;
     top: -90px;
+
+    @include bigmobile {
+        left: 140px;
+    }
+}
+
+h1 {
+    color: $white;
+    font-size: 20px;
+    font-family: 'Redcollar';
+    line-height: 24px;
+    padding-top: 24px;
+    padding-left: 16px;
 }

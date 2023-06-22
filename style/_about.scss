@@ -1,0 +1,96 @@
+.about {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: -50px;
+    padding-bottom: 58px;
+
+    &__text {
+        //
+        //margin-top: 24px;
+        font-size: 16px;
+        font-family: 'TT Commons';
+        line-height: 20px;
+        letter-spacing: -0.16px;
+        color: $white;
+    }
+
+    &__career {
+        display: grid;
+        grid-template-columns: auto;
+        border: 1px solid rgba(255, 255, 255, 1);
+        margin-top: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__career-education {}
+
+    &__career-work {}
+
+    &__career-skills-block {
+        display: flex;
+        font-size: 16px;
+        font-family: 'TT Commons';
+        line-height: 20px;
+        letter-spacing: -0.16px;
+        color: $white;
+        justify-content: space-around;
+
+    }
+}
+
+
+.info-block {
+
+    color: $white;
+
+    &__name {
+        padding-top: 12px;
+        font-size: 16px;
+        font-family: 'TT Commons';
+        line-height: 20px;
+        letter-spacing: -0.16px;
+        gap: 0;
+    }
+
+    &__text {
+        font-size: 16px;
+
+        font-family: 'TT Commons';
+        line-height: 20px;
+        letter-spacing: -0.16px;
+        opacity: 0.4000000059604645;
+        top: -80px;
+    }
+
+    &__line {
+        width: 288px;
+        border-bottom: 1px solid #FFF;
+        opacity: 0.4000000059604645;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+
+
+
+h2 {
+
+    font-size: 16px;
+    font-family: 'Redcollar';
+    line-height: 100%;
+    color: $white;
+    padding-bottom: 2px;
+}
+
+.about__career-education>h2 {
+    padding-top: 40px;
+}
+
+.about__career-work>h2 {
+    padding-top: 24px;
+}
+
+.about__career-skills>h2 {
+    padding-top: 24px;
+}

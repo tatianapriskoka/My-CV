@@ -37,6 +37,17 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .header__image > img {
   width: 220px;
   height: 20px;
@@ -61,6 +72,31 @@ body {
 }
 .description__text {
   background: #F51B1B;
+  position: relative;
+  top: -110px;
+  border-radius: 20px 20px 0px 0px;
+  width: 320px;
+}
+.description__contacts {
+  padding-left: 16px;
+  padding-top: 32px;
+  display: grid;
+  grid-template-columns: 0.3fr 0.3fr;
+  justify-content: left;
+  align-self: center;
+  padding-bottom: 40px;
+}
+.description__contacts_list {
+  display: grid;
+  padding-top: 15px;
+  gap: 10px;
+}
+.description__contacts_text {
+  display: grid;
+  font-size: 16px;
+  font-family: "TT Commons";
+  letter-spacing: -0.32px;
+  color: #FFFFFF;
 }
 
 #redunion {
@@ -70,10 +106,108 @@ body {
   top: -250px;
   left: 86px;
 }
+@media (min-width: 510px) {
+  #redunion {
+    left: -46%;
+    top: -180px;
+  }
+}
 
 #arrow {
   position: relative;
   width: 60px;
   height: 19px;
   top: -90px;
+}
+@media (min-width: 510px) {
+  #arrow {
+    left: 140px;
+  }
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: "Redcollar";
+  line-height: 24px;
+  padding-top: 24px;
+  padding-left: 16px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: -50px;
+  padding-bottom: 58px;
+}
+.about__text {
+  font-size: 16px;
+  font-family: "TT Commons";
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  color: #FFFFFF;
+}
+.about__career {
+  display: grid;
+  grid-template-columns: auto;
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.about__career-skills-block {
+  display: flex;
+  font-size: 16px;
+  font-family: "TT Commons";
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  color: #FFFFFF;
+  justify-content: space-around;
+}
+
+.info-block {
+  color: #FFFFFF;
+}
+.info-block__name {
+  padding-top: 12px;
+  font-size: 16px;
+  font-family: "TT Commons";
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  gap: 0;
+}
+.info-block__text {
+  font-size: 16px;
+  font-family: "TT Commons";
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  opacity: 0.400000006;
+  top: -80px;
+}
+.info-block__line {
+  width: 288px;
+  border-bottom: 1px solid #FFF;
+  opacity: 0.400000006;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+h2 {
+  font-size: 16px;
+  font-family: "Redcollar";
+  line-height: 100%;
+  color: #FFFFFF;
+  padding-bottom: 2px;
+}
+
+.about__career-education > h2 {
+  padding-top: 40px;
+}
+
+.about__career-work > h2 {
+  padding-top: 24px;
+}
+
+.about__career-skills > h2 {
+  padding-top: 24px;
 }
