@@ -1,0 +1,6 @@
+.main {
+    @include laptop {
+        display: grid;
+        grid-template-columns: 20% 75%;
+    }
+}

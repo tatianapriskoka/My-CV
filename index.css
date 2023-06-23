@@ -1,4 +1,5 @@
 @import 'style/normalize.css';
+@import url("https://fonts.cdnfonts.com/css/tt-commons");
 @font-face {
   font-family: "TT Commons";
   src: url("/style/fonts/TTCommonsRegular.otf") format("otf");
@@ -21,6 +22,7 @@
 html {
   position: relative;
   box-sizing: border-box;
+  max-height: 860px;
 }
 
 body {
@@ -65,10 +67,22 @@ ul {
   padding-top: 20px;
 }
 
+@media (min-width: 1024px) {
+  .main {
+    display: grid;
+    grid-template-columns: 20% 75%;
+  }
+}
+
 .description {
   display: grid;
   grid-template-columns: auto;
   margin-top: 48px;
+}
+@media (min-width: 1024px) {
+  .description {
+    max-height: 600px;
+  }
 }
 .description__text {
   background: #F51B1B;
@@ -77,11 +91,17 @@ ul {
   border-radius: 20px 20px 0px 0px;
   width: 320px;
 }
+@media (min-width: 1024px) {
+  .description__text {
+    height: 480px;
+  }
+}
 .description__contacts {
   padding-left: 16px;
   padding-top: 32px;
   display: grid;
   grid-template-columns: 0.3fr 0.3fr;
+  gap: 11px;
   justify-content: left;
   align-self: center;
   padding-bottom: 40px;
@@ -91,12 +111,24 @@ ul {
   padding-top: 15px;
   gap: 10px;
 }
+@media (min-width: 1024px) {
+  .description__contacts_list {
+    padding-top: 22px;
+    gap: 15px;
+  }
+}
 .description__contacts_text {
   display: grid;
   font-size: 16px;
   font-family: "TT Commons";
   letter-spacing: -0.32px;
   color: #FFFFFF;
+}
+@media (min-width: 1024px) {
+  .description__contacts_text {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
 }
 
 #redunion {
@@ -108,20 +140,36 @@ ul {
 }
 @media (min-width: 510px) {
   #redunion {
-    left: -46%;
-    top: -180px;
+    top: -190px;
+    left: -240px;
+  }
+}
+@media (min-width: 1024px) {
+  #redunion {
+    position: relative;
+    left: 86px;
+    top: -250px;
   }
 }
 
 #arrow {
   position: relative;
-  width: 60px;
-  height: 19px;
   top: -90px;
+  left: -15px;
 }
 @media (min-width: 510px) {
   #arrow {
-    left: 140px;
+    left: -350px;
+  }
+}
+@media (min-width: 1024px) {
+  #arrow {
+    left: -10px;
+  }
+}
+@media (min-width: 1300px) {
+  #arrow {
+    top: -88px;
   }
 }
 
@@ -133,12 +181,32 @@ h1 {
   padding-top: 24px;
   padding-left: 16px;
 }
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
 
 .about {
+  width: 100%;
+  min-height: 566px;
   display: grid;
   grid-template-columns: auto;
-  margin-top: -50px;
+  margin-top: -70px;
   padding-bottom: 58px;
+}
+@media (min-width: 1024px) {
+  .about {
+    width: 115%;
+    margin-top: 58px;
+    padding-left: 200px;
+  }
+}
+@media (min-width: 1300px) {
+  .about {
+    padding-left: 150px;
+  }
 }
 .about__text {
   font-size: 16px;
@@ -146,6 +214,15 @@ h1 {
   line-height: 20px;
   letter-spacing: -0.16px;
   color: #FFFFFF;
+}
+@media (min-width: 1024px) {
+  .about__text {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.18px;
+    text-align: left;
+    width: 65%;
+  }
 }
 .about__career {
   display: grid;
@@ -162,7 +239,16 @@ h1 {
   line-height: 20px;
   letter-spacing: -0.16px;
   color: #FFFFFF;
-  justify-content: space-around;
+  gap: 16px;
+}
+@media (min-width: 1024px) {
+  .about__career-skills-block {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.18px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+  }
 }
 
 .info-block {
@@ -184,12 +270,24 @@ h1 {
   opacity: 0.400000006;
   top: -80px;
 }
+@media (min-width: 1024px) {
+  .info-block__text {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.18px;
+  }
+}
 .info-block__line {
-  width: 288px;
+  min-width: 288px;
   border-bottom: 1px solid #FFF;
   opacity: 0.400000006;
   padding-top: 24px;
   padding-bottom: 24px;
+}
+@media (min-width: 1024px) {
+  .info-block__line {
+    display: none;
+  }
 }
 
 h2 {
@@ -200,14 +298,78 @@ h2 {
   padding-bottom: 2px;
 }
 
+@media (min-width: 1024px) {
+  .about__career-education {
+    display: flex;
+    border-bottom: 1px solid #FFF;
+    gap: 72px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+
 .about__career-education > h2 {
   padding-top: 40px;
+}
+@media (min-width: 1024px) {
+  .about__career-education > h2 {
+    width: 124px;
+    padding-top: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about__career-work {
+    display: flex;
+    border-bottom: 1px solid #FFF;
+    gap: 72px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .about__career-work > h2 {
   padding-top: 24px;
 }
+@media (min-width: 1024px) {
+  .about__career-work > h2 {
+    width: 124px;
+    padding-top: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about__career-skills {
+    display: flex;
+    gap: 72px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 270px;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1300px) {
+  .about__career-skills {
+    height: 290px;
+  }
+}
 
 .about__career-skills > h2 {
   padding-top: 24px;
+}
+@media (min-width: 1024px) {
+  .about__career-skills > h2 {
+    width: 124px;
+    padding-top: 0px;
+  }
+}
+
+#arrowwhite {
+  position: relative;
+  left: 40%;
+  top: -0.5px;
+}
+@media (min-width: 1024px) {
+  #arrowwhite {
+    left: 5%;
+  }
 }

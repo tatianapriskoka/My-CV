@@ -1,21 +1,28 @@
 .description {
+
     display: grid;
     grid-template-columns: auto;
     margin-top: 48px;
 
-    &__container {}
+    @include laptop {
+        max-height: 600px;
+    }
 
-    &__foto {}
+
 
     &__text {
+
         background: #F51B1B;
         position: relative;
         top: -110px;
         border-radius: 20px 20px 0px 0px;
         width: 320px;
+
+        @include laptop {
+            height: 480px;
+        }
     }
 
-    &__name {}
 
     &__contacts {
 
@@ -23,6 +30,7 @@
         padding-top: 32px;
         display: grid;
         grid-template-columns: 0.3fr 0.3fr;
+        gap: 11px;
         justify-content: left;
         align-self: center;
         padding-bottom: 40px;
@@ -33,6 +41,11 @@
             padding-top: 15px;
             gap: 10px;
 
+            @include laptop {
+                padding-top: 22px;
+                gap: 15px;
+            }
+
         }
 
         &_text {
@@ -42,12 +55,14 @@
             letter-spacing: -0.32px;
             color: $white;
 
+            @include laptop {
+                font-size: 20px;
+                letter-spacing: -0.4px;
+            }
+
         }
     }
 }
-
-.container {}
-
 
 #redunion {
     position: relative;
@@ -57,23 +72,36 @@
     left: 86px;
 
     @include bigmobile {
-        left: -46%;
-        top: -180px;
-        //top: 20px;
+        top: -190px;
+        left: -240px;
+    }
+
+    @include laptop {
+        position: relative;
+        left: 86px;
+        top: -250px;
 
     }
-}
 
+
+}
 
 
 #arrow {
     position: relative;
-    width: 60px;
-    height: 19px;
     top: -90px;
+    left: -15px;
 
     @include bigmobile {
-        left: 140px;
+        left: -350px;
+    }
+
+    @include laptop {
+        left: -10px;
+    }
+
+    @include desctop {
+        top: -88px;
     }
 }
 
@@ -84,4 +112,9 @@ h1 {
     line-height: 24px;
     padding-top: 24px;
     padding-left: 16px;
+
+    @include laptop {
+        font-size: 24px;
+        line-height: 28px;
+    }
 }

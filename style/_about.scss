@@ -1,17 +1,37 @@
 .about {
+
+    width: 100%;
+    min-height: 566px;
     display: grid;
     grid-template-columns: auto;
-    margin-top: -50px;
+    margin-top: -70px;
     padding-bottom: 58px;
 
+    @include laptop {
+        width: 115%;
+        margin-top: 58px;
+        padding-left: 200px;
+    }
+
+    @include desctop {
+        padding-left: 150px;
+    }
+
     &__text {
-        //
-        //margin-top: 24px;
+
         font-size: 16px;
         font-family: 'TT Commons';
         line-height: 20px;
         letter-spacing: -0.16px;
         color: $white;
+
+        @include laptop {
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.18px;
+            text-align: left;
+            width: 65%;
+        }
     }
 
     &__career {
@@ -23,10 +43,6 @@
         padding-right: 15px;
     }
 
-    &__career-education {}
-
-    &__career-work {}
-
     &__career-skills-block {
         display: flex;
         font-size: 16px;
@@ -34,11 +50,18 @@
         line-height: 20px;
         letter-spacing: -0.16px;
         color: $white;
-        justify-content: space-around;
+        gap: 16px;
+
+        @include laptop {
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.18px;
+            column-gap: 32px;
+
+        }
 
     }
 }
-
 
 .info-block {
 
@@ -55,27 +78,33 @@
 
     &__text {
         font-size: 16px;
-
         font-family: 'TT Commons';
         line-height: 20px;
         letter-spacing: -0.16px;
         opacity: 0.4000000059604645;
         top: -80px;
+
+        @include laptop {
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: -0.18px;
+        }
     }
 
     &__line {
-        width: 288px;
+        min-width: 288px;
         border-bottom: 1px solid #FFF;
         opacity: 0.4000000059604645;
         padding-top: 24px;
         padding-bottom: 24px;
+
+        @include laptop {
+            display: none;
+        }
     }
 }
 
-
-
 h2 {
-
     font-size: 16px;
     font-family: 'Redcollar';
     line-height: 100%;
@@ -83,14 +112,80 @@ h2 {
     padding-bottom: 2px;
 }
 
+.about__career-education {
+    @include laptop {
+        display: flex;
+        border-bottom: 1px solid #FFF;
+        gap: 72px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+}
+
+
 .about__career-education>h2 {
     padding-top: 40px;
+
+    @include laptop {
+        width: 124px;
+        padding-top: 0px;
+    }
+
+}
+
+.about__career-work {
+    @include laptop {
+        display: flex;
+        border-bottom: 1px solid #FFF;
+        gap: 72px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+
 }
 
 .about__career-work>h2 {
     padding-top: 24px;
+
+    @include laptop {
+        width: 124px;
+        padding-top: 0px;
+    }
+}
+
+.about__career-skills {
+    @include laptop {
+        display: flex;
+        gap: 72px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 270px;
+
+        @include desctop {
+            height: 290px;
+        }
+    }
 }
 
 .about__career-skills>h2 {
     padding-top: 24px;
+
+    @include laptop {
+        width: 124px;
+        padding-top: 0px;
+
+    }
+}
+
+#arrowwhite {
+    position: relative;
+    left: 40%;
+    top: -0.5px;
+
+    @include laptop {
+        left: 5%;
+    }
 }
